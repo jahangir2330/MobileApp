@@ -2068,11 +2068,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj",
+      "projectUniqueName": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj",
       "projectName": "AppConfig",
-      "projectPath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj",
+      "projectPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj",
       "packagesPath": "C:\\Users\\shahr\\.nuget\\packages\\",
-      "outputPath": "E:\\Kuwait\\Mob\\AppConfig\\obj\\",
+      "outputPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2096,8 +2096,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "E:\\Kuwait\\Mob\\BDO\\BDO.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\BDO\\BDO.csproj"
+            "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jOympkW2oCs=",
+  "dgSpecHash": "NshiLaPCeK0=",
   "success": true,
-  "projectFilePath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj",
+  "projectFilePath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shahr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\shahr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",
