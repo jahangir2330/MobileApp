@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HelloWorld" xml:space="preserve">
+    <value>انشاء طلب</value>
+  </data>
+  <data name="Counter" xml:space="preserve">
+    <value>Kuwaiti Counter</value>
+  </data>
+  <data name="requestapplicationid" xml:space="preserve">
+    <value>انشاء طلب</value>
+  </data>
+  <data name="requestapplicationidRequired" xml:space="preserve">
+    <value>يرجى تقديم طلب</value>
+  </data>
+  <data name="fullname" xml:space="preserve">
+    <value>اسم الموظف</value>
+  </data>
+  <data name="fullnameRequired" xml:space="preserve">
+    <value>الرجاء ادخال اسم الموظف</value>
+  </data>
+  <data name="fullnameen" xml:space="preserve">
+    <value>اسم الموظف باللغة الانجليزية</value>
+  </data>
+  <data name="fullnameenRequired" xml:space="preserve">
+    <value>الرجاء ادخال اسم الموظف باللغة الانجليزية</value>
+  </data>
+  <data name="nationalityid" xml:space="preserve">
+    <value>الجنسية</value>
+  </data>
+  <data name="nationalityidRequired" xml:space="preserve">
+    <value>الرجاء ادخال الجنسية</value>
+  </data>
+  <data name="jobtitle" xml:space="preserve">
+    <value>المهنة</value>
+  </data>
+  <data name="jobtitleRequired" xml:space="preserve">
+    <value>الرجاء ادخال المهنة</value>
+  </data>
+  <data name="idtype" xml:space="preserve">
+    <value>الوثيقة</value>
+  </data>
+  <data name="civilidnumber" xml:space="preserve">
+    <value>الرقم المدني/رقم الجواز</value>
+  </data>
+  <data name="civilidnumberRequired" xml:space="preserve">
+    <value>الرجاء ادخال الرقم المدني</value>
+  </data>
+  <data name="civilidexpirydate" xml:space="preserve">
+    <value>تاريخ انتهاء البطاقة المدنية</value>
+  </data>
+  <data name="passportnumber" xml:space="preserve">
+    <value>رقم الجواز</value>
+  </data>
+  <data name="hasvehicle" xml:space="preserve">
+    <value>لديه مركبة؟</value>
+  </data>
+  <data name="carnumberplate" xml:space="preserve">
+    <value>رقم لوحة السيارة</value>
+  </data>
+  <data name="vehiclecolorid" xml:space="preserve">
+    <value>لون المركبة</value>
+  </data>
+  <data name="carnumberplateRequired" xml:space="preserve">
+    <value>الرجاء ادخال رقم اللوحة</value>
+  </data>
+  <data name="vehicleregistrationimagepath" xml:space="preserve">
+    <value>ارفاق دفتر المركبة</value>
+  </data>
+  <data name="personalpicurepath" xml:space="preserve">
+    <value>صورة شخصية</value>
+  </data>
+  <data name="civilidimagepath" xml:space="preserve">
+    <value>صورة البطاقة المدنية</value>
+  </data>
+  <data name="civilidbacksideimagepath" xml:space="preserve">
+    <value>الصورة الخلفية للبطاقة المدنية</value>
+  </data>
+  <data name="ispersonblocked" xml:space="preserve">
+    <value>هل الشخص محظور؟</value>
+  </data>
+  <data name="personblockstartdate" xml:space="preserve">
+    <value>تاريخ بدء الحظر</value>
+  </data>
+  <data name="personblockenddate" xml:space="preserve">
+    <value>تاريخ انتهاء الحظر</value>
+  </data>
+  <data name="personblockedbyuserid" xml:space="preserve">
+    <value>حظر من قبل</value>
+  </data>
+  <data name="personextentionenddate" xml:space="preserve">
+    <value>تاريخ انتهاء التمديد</value>
+  </data>
+  <data name="personextendat" xml:space="preserve">
+    <value>تمديد في</value>
+  </data>
+  <data name="personextendbyuserid" xml:space="preserve">
+    <value>تمديد بواسطة</value>
+  </data>
+  <data name="isactive" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="gateidstring" xml:space="preserve">
+    <value>البوابات المعتمدة</value>
+  </data>
+  <data name="expirydate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="enddate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="startdate" xml:space="preserve">
+    <value>تاريخ البدء</value>
+  </data>
+  <data name="companyid" xml:space="preserve">
+    <value>إسم الشركة</value>
+  </data>
+  <data name="changelanguage" xml:space="preserve">
+    <value>تغيير اللغة</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>تسجيل خروج</value>
+  </data>
+  <data name="enterpin" xml:space="preserve">
+    <value>أدخل رقم التعريف الشخصي</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>إذن</value>
+  </data>
+  <data name="MyQr" xml:space="preserve">
+    <value>ريال قطري الخاص بي</value>
+  </data>
+  <data name="Vehicle" xml:space="preserve">
+    <value>عربة</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>حساب تعريفي</value>
+  </data>
+  <data name="resetpersonaldata" xml:space="preserve">
+    <value>إعادة ضبط البيانات الشخصية</value>
+  </data>
+  <data name="resetvehicledata" xml:space="preserve">
+    <value>إعادة ضبط بيانات السيارة</value>
+  </data>
+  <data name="ScanQR" xml:space="preserve">
+    <value>مسح QR</value>
+  </data>
+  <data name="QrScanNote" xml:space="preserve">
+    <value>ملحوظة: يرجى مسح رمز الاستجابة السريعة الموجود في خطاب الإذن الخاص بك</value>
+  </data>
+  <data name="Enter4DigitPin" xml:space="preserve">
+    <value>أدخل رقم التعريف الشخصي المكون من 4 أرقام</value>
+  </data>
+  <data name="SetPin" xml:space="preserve">
+    <value>تعيين دبوس</value>
+  </data>
+  <data name="vehiclecategoryid" xml:space="preserve">
+    <value>نوع المركبة</value>
+  </data>
+  <data name="vehiclebrandid" xml:space="preserve">
+    <value>العلامة التجارية للمركبة</value>
+  </data>
+  <data name="vehiclemodelid" xml:space="preserve">
+    <value>سنة الصنع</value>
+  </data>
+  <data name="RegisterWithQRCode" xml:space="preserve">
+    <value>سجل باستخدام رمز QR</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>موظف</value>
+  </data>
+  <data name="RemoveData" xml:space="preserve">
+    <value>إزالة البيانات</value>
+  </data>
+  <data name="AddData" xml:space="preserve">
+    <value>إضافة البيانات</value>
+  </data>
+  <data name="GoBack" xml:space="preserve">
+    <value>عُد</value>
+  </data>
+  <data name="dashboard" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+</root>

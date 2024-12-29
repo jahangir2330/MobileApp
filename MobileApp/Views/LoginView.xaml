@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ContentPageBase xmlns:views="clr-namespace:MobileApp.Views" 
+                       xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+                       xmlns:animations="clr-namespace:MobileApp.Animations" 
+                       xmlns:converters="clr-namespace:MobileApp.Converters" 
+                       xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+                       xmlns:triggers="clr-namespace:MobileApp.Triggers" 
+                       xmlns:viewModelBase="clr-namespace:MobileApp.ViewModels.Base" 
+                       xmlns:viewmodels="clr-namespace:MobileApp.ViewModels" 
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                       xmlns:local="clr-namespace:MobileApp"
+                       x:Class="MobileApp.Views.LoginView" 
+                       x:DataType="viewmodels:LoginViewModel" 
+                       Shell.FlyoutBehavior="Disabled" 
+                       Shell.NavBarIsVisible="False" 
+                       Shell.TabBarIsVisible="False" 
+                       BackgroundColor="{StaticResource LightGrayColor}">
+    <ContentPage.Title>
+        <OnPlatform x:TypeArguments="x:String">
+            <On Platform="iOS, WinUI" Value="Gate Management" />
+        </OnPlatform>
+    </ContentPage.Title>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter" />
+            <converters:WebNavigatingEventArgsConverter x:Key="WebNavigatingEventArgsConverter" />
+            <converters:WebNavigatedEventArgsConverter x:Key="WebNavigatedEventArgsConverter" />
+            <converters:StringIsNullOrEmptyToHideConverter x:Key="StringIsNullOrEmptyToHideConverter" />
+
+            <Style x:Key="TitleLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Bold" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="25, 25, 0, 0" />
+            </Style>
+            <Style x:Key="HeaderLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Regular" />
+                <Setter Property="FontSize" Value="{StaticResource LittleSize}" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+            <Style x:Key="CaptionArabicStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="NotoKufiArabicRegular" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryDark}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Margin" Value="0,0,0,-10" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="LoginButtonStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Regular" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="LoginPanelStyle" TargetType="{x:Type Grid}">
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BackgroundColor" Value="{StaticResource LightGreenColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+            <Style x:Key="RegisterPanelStyle" TargetType="{x:Type Grid}" BasedOn="{StaticResource LoginPanelStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenColor}" />
+            </Style>
+            <Style x:Key="SettingsPanelStyle" TargetType="{x:Type Grid}" BasedOn="{StaticResource LoginPanelStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="SettingsImageStyle" TargetType="{x:Type Image}">
+                <Setter Property="Margin" Value="12" />
+            </Style>
+            <animations:StoryBoard x:Key="LoginAnimation" Target="{x:Reference LoginPanel}">
+                <animations:FadeInAnimation Direction="Up" Duration="1500" />
+            </animations:StoryBoard>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Triggers>
+        <EventTrigger Event="Appearing">
+            <triggers:BeginAnimation Animation="{StaticResource LoginAnimation}" />
+        </EventTrigger>
+    </ContentPage.Triggers>
+    <Grid>
+        <Image Source="header_bg.png" HeightRequest="400" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start" />
+        <Image Source="footer.png" HeightRequest="150" Aspect="AspectFill" HorizontalOptions="End" VerticalOptions="End" />
+        <!-- MOCK AUTH -->
+        <Grid x:Name="LoginPanel" IsVisible="{Binding HasData}" Padding="0" ColumnSpacing="0" RowSpacing="0" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+
+            <!--  USER INFO -->
+            <StackLayout Grid.Row="1" Margin="4, 34" >
+                <StackLayout IsVisible="{Binding HasEmployeeData, Mode=TwoWay}">
+                    <Frame HeightRequest="95" WidthRequest="75">
+                        <Image Source="{Binding EmployeeImagePath, Mode=TwoWay}" HeightRequest="90" WidthRequest="70" Aspect="AspectFill" />
+                    </Frame>
+                    <Label Text="{Binding EmployeeNameArabic, Mode=TwoWay}" Style="{StaticResource LargeArabicSizeFontStyle}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="0,15,0,0"/>
+                    <Label Text="{Binding EmployeeNameEnglish, Mode=TwoWay}" Style="{StaticResource LargeSizeFontStyle}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="0"/>
+                </StackLayout>
+                <Label LineBreakMode="WordWrap" HorizontalOptions="Center" IsVisible="{Binding HasVehicleData, Mode=TwoWay}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{local:Translate carnumberplate}" TextColor="{StaticResource SecondaryDark}" FontSize="18"  />
+
+                            <Span Text="{Binding VehicleNumberPlate, StringFormat=': {0:N0}'}" TextColor="{StaticResource SecondaryDark}" FontSize="18"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <!-- LOG IN FRAME -->
+            <Frame Grid.Row="2" Margin="10,10" HasShadow="False" CornerRadius="10" HeightRequest="250" BackgroundColor="{StaticResource Tertiary}" Opacity=".9" MaximumWidthRequest="600">
+                <StackLayout >
+                    <StackLayout.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="{StaticResource Color5}" Offset="0.1" />
+                            <GradientStop Color="{StaticResource PrimaryLight}" Offset="0.5" />
+                            <GradientStop Color="{StaticResource Color5}" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </StackLayout.Background>
+                    <!-- LOGIN FORM -->
+                    <StackLayout Grid.Row="3" Margin="20" Spacing="10">
+                        <Label Text="{local:Translate enterpin}" Style="{StaticResource HeaderLabelStyle}" HorizontalOptions="Center" />
+                        <Entry x:Name="entryPin" TextChanged="entryPin_TextChanged" IsPassword="True" Text="{Binding PinCode.Value, Mode=TwoWay}" MaxLength="4" Keyboard="Numeric" HorizontalTextAlignment="Center" Placeholder="Enter Your PIN Here" PlaceholderColor="{StaticResource Gray100}">
+                            <Entry.Style>
+                                <OnPlatform x:TypeArguments="Style">
+                                    <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
+                                    <On Platform="WinUI" Value="{StaticResource WinUIEntryStyle}" />
+                                </OnPlatform>
+                            </Entry.Style>
+                            <Entry.Behaviors>
+                                <mct:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateCommand}" />
+                            </Entry.Behaviors>
+                            <Entry.Triggers>
+                                <DataTrigger TargetType="Entry" Binding="{Binding PinCode.IsValid}" Value="False">
+                                    <Setter Property="BackgroundColor" Value="{StaticResource ErrorColor}" />
+                                </DataTrigger>
+                            </Entry.Triggers>
+                        </Entry>
+
+                        <Label Text="{Binding PinCode.Errors, Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" IsVisible="{Binding Text, Source={x:Reference LabelPinError}, Converter={StaticResource StringIsNullOrEmptyToHideConverter}}" x:Name="LabelPinError"/>
+                       
+                        <Grid  BackgroundColor="Transparent" HeightRequest="44" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid BackgroundColor="{StaticResource SecondaryDark}" Grid.Column="0" Margin="0,0,3,0" >
+                                <Label Text="{local:Translate login}" Style="{StaticResource LoginButtonStyle}" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding MockSignInCommand}" NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <ImageButton Source="fingerprint.png" Grid.Column="1" 
+                                        Clicked="OnFingerprintClicked"
+                                        BorderColor="{StaticResource PrimaryLight}" 
+                                        Background="{StaticResource Primary}" />
+
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+
+        <Grid x:Name="LanguagePanel"  Padding="0" ColumnSpacing="0" RowSpacing="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <!-- USER INFO -->
+            <StackLayout Grid.Row="1" Margin="4, 34" >
+                <Button
+                    x:Name="LanguageChangeBtn"
+                    Text="Change Language"
+                    Clicked="OnFlowDirectionChangeClicked"
+                    Margin="0,30,-10,0"
+                    BackgroundColor="{StaticResource SecondaryDark}" 
+                    HorizontalOptions="End"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        </Grid>
+
+        <!-- AUTH -->
+        <Grid ColumnSpacing="0" 
+              RowSpacing="0" 
+              IsVisible="{Binding HasData, Converter={StaticResource InverseBoolConverter}}" 
+              RowDefinitions="*,2*,60,150" 
+              ColumnDefinitions="*,*,64">
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  />
+            <Grid Padding="5" Margin="25,0,25,0" Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="50" >
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Welcome to" Style="{StaticResource CaptionArabicStyle}"/>
+                    <Label Text="Kuwait Army" Style="{StaticResource CaptionArabicStyle}"/>
+
+                    <Label Text="مرحبا بك في" Style="{StaticResource CaptionArabicStyle}"/>
+                    <Label Text="الجيش الكويتي" Style="{StaticResource CaptionArabicStyle}"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid BackgroundColor="{StaticResource SecondaryDark}" Grid.Column="0" Grid.Row="2" Padding="20" Grid.ColumnSpan="3" Margin="20,0" >
+                <Label Text="{local:Translate SetPin}" Style="{StaticResource LoginButtonStyle}" />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToCreatePinPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+            <WebView Source="{Binding LoginUrl}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsLogin}">
+                <WebView.Behaviors>
+                    <mct:EventToCommandBehavior EventName="Navigating" EventArgsConverter="{StaticResource WebNavigatingEventArgsConverter}" Command="{Binding NavigateCommand}" />
+                </WebView.Behaviors>
+            </WebView>
+        </Grid>
+        <!-- INDICATOR -->
+        <ActivityIndicator Color="{StaticResource ActivityIndicatorColor}" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" />
+    </Grid>
+</views:ContentPageBase>

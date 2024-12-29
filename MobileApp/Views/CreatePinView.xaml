@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase 
+    xmlns:views="clr-namespace:MobileApp.Views"
+    x:Class="MobileApp.Views.CreatePinView"
+    xmlns:local="clr-namespace:MobileApp"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:MobileApp.Animations" 
+    xmlns:converters="clr-namespace:MobileApp.Converters" 
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+    xmlns:triggers="clr-namespace:MobileApp.Triggers" 
+    xmlns:viewModelBase="clr-namespace:MobileApp.ViewModels.Base"
+    xmlns:viewmodels="clr-namespace:MobileApp.ViewModels"
+    Title="{local:Translate SetPin}"
+    x:DataType="viewmodels:CreatePinViewModel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter" />
+            <converters:WebNavigatingEventArgsConverter x:Key="WebNavigatingEventArgsConverter" />
+            <converters:WebNavigatedEventArgsConverter x:Key="WebNavigatedEventArgsConverter" />
+            <converters:StringIsNullOrEmptyToHideConverter x:Key="StringIsNullOrEmptyToHideConverter" />
+
+            <Style x:Key="TitleLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Bold" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="25, 25, 0, 0" />
+            </Style>
+            <Style x:Key="HeaderLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Regular" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryDarkText}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="LoginButtonStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Regular" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="LoginPanelStyle" TargetType="{x:Type Grid}">
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BackgroundColor" Value="{StaticResource LightGreenColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+           </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout>
+        <Frame             
+            Margin="25,10" 
+            HasShadow="False" 
+            VerticalOptions="Center" 
+            CornerRadius="5" 
+            BackgroundColor="{StaticResource Tertiary}" 
+            Opacity=".9" 
+            MaximumWidthRequest="600">
+            <StackLayout Grid.Row="3" Spacing="10">
+                <StackLayout x:Name="setPinFrame" 
+                             IsVisible="True"  
+                             Spacing="10">
+
+                    <Label Text="{local:Translate Enter4DigitPin} " 
+                        Style="{StaticResource HeaderLabelStyle}" />
+
+                    <Entry IsPassword="True" 
+                         Text="{Binding PinCode.Value, Mode=TwoWay}" 
+                         MaxLength="4"
+                         Keyboard="Numeric" 
+                         HorizontalTextAlignment="Center" 
+                         Placeholder="Enter 4 Digit PIN Here" 
+                         PlaceholderColor="{StaticResource Gray400}">
+                        <Entry.Style>
+                            <OnPlatform x:TypeArguments="Style">
+                                <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
+                                <On Platform="WinUI" Value="{StaticResource WinUIEntryStyle}" />
+                            </OnPlatform>
+                        </Entry.Style>
+                        <Entry.Behaviors>
+                            <mct:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateCommand}" />
+                        </Entry.Behaviors>
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry" Binding="{Binding PinCode.IsValid}" Value="False">
+                                <Setter Property="BackgroundColor" Value="{StaticResource ErrorColor}" />
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                 
+                    <Entry IsPassword="True" Text="{Binding RepeatPinCode.Value, Mode=TwoWay}" 
+                         Keyboard="Numeric" 
+                         MaxLength="4"
+                         HorizontalTextAlignment="Center" 
+                         Placeholder="Repat Enter 4 Digit PIN Here" 
+                         PlaceholderColor="{StaticResource Gray400}">
+                        <Entry.Style>
+                            <OnPlatform x:TypeArguments="Style">
+                                <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
+                                <On Platform="WinUI" Value="{StaticResource WinUIEntryStyle}" />
+                            </OnPlatform>
+                        </Entry.Style>
+                        <Entry.Behaviors>
+                            <mct:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateCommand}" />
+                        </Entry.Behaviors>
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry" Binding="{Binding PinCode.IsValid}" Value="False">
+                                <Setter Property="BackgroundColor" Value="{StaticResource ErrorColor}" />
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+
+                    <Label Text="{Binding PinCode.Errors, Converter={StaticResource FirstValidationErrorConverter}}" Style="{StaticResource ValidationErrorLabelStyle}" IsVisible="{Binding Text, Source={x:Reference LabelPinError}, Converter={StaticResource StringIsNullOrEmptyToHideConverter}}" x:Name="LabelPinError"/>
+
+                    <Grid BackgroundColor="{StaticResource SecondaryDark}" Padding="10" >
+                        <Label Text="{local:Translate SetPin}" Style="{StaticResource LoginButtonStyle}" />
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SetPinCodeCommand}" NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+
+        </Frame>
+        <ActivityIndicator Color="{StaticResource BlackColor}" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    </StackLayout>
+
+</views:ContentPageBase>

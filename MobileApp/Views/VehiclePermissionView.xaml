@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:ContentPageBase xmlns:views="clr-namespace:MobileApp.Views" 
+                       xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+                       xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+                       xmlns:converters="clr-namespace:MobileApp.Converters"
+                       xmlns:viewModelBase="clr-namespace:MobileApp.ViewModels.Base" 
+                       xmlns:viewmodels="clr-namespace:MobileApp.ViewModels" 
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                       x:Class="MobileApp.Views.VehiclePermissionView" 
+                       Title="{local:Translate Vehicle}" 
+                       x:DataType="viewmodels:VehiclePermissionViewModel"
+                       xmlns:local="clr-namespace:MobileApp"
+                       Shell.FlyoutBehavior="Flyout">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeToVisibilityConverter x:Key="DateTimeToVisibilityConverter" />
+            <Style x:Key="CampaignImageStyle" TargetType="{x:Type Image}">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{local:Translate logout}" Command="{Binding LogoutCommand}" />
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Image Source="header_bg.png" Grid.ColumnSpan="2" HeightRequest="300" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start" />
+        <Image Source="Images/bg_g2g" Aspect="AspectFill" Margin="0,150,0,0" />
+        <Image Source="footer.png" Grid.ColumnSpan="2" HeightRequest="30"  Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="End" />
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="{Binding HasVehicleData, Converter={StaticResource InverseBoolConverter}}">
+                <Label Text="No Vehicle Found"></Label>
+            </StackLayout>
+
+
+            <ScrollView VerticalOptions="FillAndExpand"  IsVisible="{Binding HasVehicleData}">
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Row="0" Grid.Column="0" Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate carnumberplate}" Style="{StaticResource DefaultCaptionLabelStyle}"  />
+                            <Label Text="{Binding vehicle.carnumberplate}" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="1" Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate companyid}" Style="{StaticResource DefaultCaptionLabelStyle}" />
+                            <Label Text="{Binding vehicle.companyname}" />
+                        </StackLayout>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Row="0" Grid.Column="0" Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate vehiclecategoryid}" Style="{StaticResource DefaultCaptionLabelStyle}"  />
+                            <Label Text="{Binding vehicle.vehiclecategoryname}" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="1" Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate vehiclecolorid}" Style="{StaticResource DefaultCaptionLabelStyle}" />
+                            <Label Text="{Binding vehicle.vehiclecolorname}" />
+                        </StackLayout>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Row="0" Grid.Column="0" Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate vehiclebrandid}" Style="{StaticResource DefaultCaptionLabelStyle}"  />
+                            <Label Text="{Binding vehicle.vehiclebrandname}" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="1" Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate vehiclemodelid}" Style="{StaticResource DefaultCaptionLabelStyle}" />
+                            <Label Text="{Binding vehicle.vehiclemodelname}" />
+                        </StackLayout>
+                    </Grid>
+                   
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0"  Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate startdate}" Style="{StaticResource DefaultCaptionLabelStyle}"/>
+                            <Label Text="{Binding vehicle.startdate, StringFormat={StaticResource DateTimeFormat}}" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1"  Style="{StaticResource DefaultStackLayout}" >
+                            <Label Text="{local:Translate enddate}" Style="{StaticResource DefaultCaptionLabelStyle}" />
+                            <Label Text="{Binding vehicle.enddate, StringFormat={StaticResource DateTimeFormat}}" />
+                        </StackLayout>
+                    </Grid>
+
+                    <StackLayout IsVisible="{Binding vehicle.vehicleextentionenddate, Converter={StaticResource DateTimeToVisibilityConverter}}" Style="{StaticResource DefaultStackLayout}" >
+                        <Label Text="{local:Translate personextentionenddate}" Style="{StaticResource DefaultCaptionLabelStyle}"/>
+                        <Label Text="{Binding vehicle.vehicleextentionenddate, StringFormat={StaticResource DateTimeFormat}}"/>
+                    </StackLayout>
+                    <StackLayout Grid.ColumnSpan="2" Style="{StaticResource DefaultStackLayout}" >
+                        <Label Text="{local:Translate gateidstring}" Style="{StaticResource DefaultCaptionLabelStyle}"/>
+                        <Label Text="{Binding vehicle.gatenamesstring}" />
+                    </StackLayout>
+                    <StackLayout Grid.ColumnSpan="2" Style="{StaticResource DefaultStackLayout}" >
+                        <Image Source="{Binding vehicle.approvedbysignature}" HeightRequest="70" Style="{StaticResource CampaignImageStyle}" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="{Binding vehicle.approveddate, StringFormat='{0:dd-MMM-yyyy} بتاريخ'}" HorizontalOptions="StartAndExpand" />
+                    </StackLayout>
+                    <!--<Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray" />-->
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </Grid>
+
+</views:ContentPageBase>

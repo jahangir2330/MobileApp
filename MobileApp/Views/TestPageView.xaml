@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase 
+    xmlns:views="clr-namespace:MobileApp.Views"
+    x:Class="MobileApp.Views.TestPageView"
+    xmlns:local="clr-namespace:MobileApp"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:MobileApp.Animations" 
+    xmlns:converters="clr-namespace:MobileApp.Converters" 
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+    xmlns:triggers="clr-namespace:MobileApp.Triggers" 
+    xmlns:viewModelBase="clr-namespace:MobileApp.ViewModels.Base"
+    xmlns:viewmodels="clr-namespace:MobileApp.ViewModels"
+    Title="Test Page"
+    x:DataType="viewmodels:TestPageViewModel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter" />
+            <converters:WebNavigatingEventArgsConverter x:Key="WebNavigatingEventArgsConverter" />
+            <converters:WebNavigatedEventArgsConverter x:Key="WebNavigatedEventArgsConverter" />
+            <converters:StringIsNullOrEmptyToHideConverter x:Key="StringIsNullOrEmptyToHideConverter" />
+
+            <Style x:Key="TitleLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Bold" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="25, 25, 0, 0" />
+            </Style>
+            <Style x:Key="HeaderLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Regular" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryDarkText}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="LoginButtonStyle" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="PlusJakartaSans-Regular" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="LoginPanelStyle" TargetType="{x:Type Grid}">
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BackgroundColor" Value="{StaticResource LightGreenColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+           </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout>
+        <Grid>
+            <Image Source="header_bg.png" Grid.ColumnSpan="2" HeightRequest="300" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start" />
+            <Image Source="Images/bg_g2g" Aspect="AspectFill" Margin="0,150,0,0" />
+            <Image Source="footer.png" Grid.ColumnSpan="2" HeightRequest="30"  Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="End" />
+            <StackLayout     Grid.Row="3" Spacing="10">
+                <Frame         
+                    Margin="25,10" 
+                    HasShadow="False" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    CornerRadius="5" 
+                    BackgroundColor="{StaticResource Tertiary}" 
+                    Opacity=".9" 
+                    MaximumWidthRequest="600">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="{Binding FoundQrText}" />
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+         <ActivityIndicator Color="{StaticResource BlackColor}" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    </StackLayout>
+
+</views:ContentPageBase>

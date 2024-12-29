@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase
+    x:Class="MobileApp.Views.ContactDocumentEmployeeView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:local="clr-namespace:MobileApp"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModelBase="clr-namespace:MobileApp.ViewModels.Base"
+    xmlns:viewmodels="clr-namespace:MobileApp.ViewModels"
+    xmlns:views="clr-namespace:MobileApp.Views"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+	Title="{local:Translate MyQr}"
+    x:DataType="viewmodels:QrDisplayEmployeeViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+       
+       
+
+         <ActivityIndicator Color="{StaticResource BlackColor}" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    </Grid>
+</views:ContentPageBase>

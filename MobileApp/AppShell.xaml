@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+    xmlns:views="clr-namespace:MobileApp.Views"
+    xmlns:local="clr-namespace:MobileApp"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    FlowDirection="LeftToRight"
+    x:Class="MobileApp.AppShell"
+    Shell.BackgroundColor="{StaticResource FlyoutBackgroundColor}"
+    Shell.ForegroundColor="{StaticResource LightForegroundColor}"
+    Shell.TitleColor="{StaticResource LightForegroundColor}"
+    >
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Dark={StaticResource FlyoutBackgroundColor}, Light={StaticResource FlyoutBackgroundColor}}" />
+                <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Dark={StaticResource DarkForegroundColor}, Light={StaticResource LightForegroundColor}}" />
+                <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Dark={StaticResource DarkTabTitleColor}, Light={StaticResource LightTabTitleColor}}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Dark={StaticResource DarkTabTitleColor}, Light={StaticResource LightTabTitleColor}}" />
+                <Setter Property="Shell.DisabledColor" Value="red" />
+                <Setter Property="Shell.UnselectedColor" Value="Gray" />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="Shell"/>
+        </ResourceDictionary>
+    </Shell.Resources>
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior TextOverride="Back"/>
+    </Shell.BackButtonBehavior>
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="Black">
+            <Image Aspect="AspectFill" 
+           Source="header_kaf.png" 
+           Opacity="0.6" />
+            <Label Text="{local:Translate Permission}" 
+           TextColor="White" 
+           FontAttributes="Bold" 
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center" />
+        </Grid>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <StackLayout BackgroundColor="{StaticResource Color7}" Padding="0,5">
+            <Label Text="©الجيش الكويتي 2016-2022. كل الحقوق محفوظة"
+        TextColor="Black"
+                   
+        FontAttributes="Bold"
+        HorizontalOptions="Center" />
+            <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:dd MMMM yyyy}'}"
+        TextColor="Black"
+        HorizontalOptions="Center" />
+        </StackLayout>
+    </Shell.FlyoutFooter>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Route="Employee"               
+                    Title="{local:Translate dashboard}"
+                    Icon="{StaticResource ProfileIconImageSource}"
+                    ContentTemplate="{DataTemplate views:EmployeeView}" >
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Route="NewQrScanView"               
+                   Title="{local:Translate ScanQR}"
+                    Icon="{StaticResource AddDataIconImageSource}" 
+                ContentTemplate="{DataTemplate views:NewQrScanView}"  >
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Route="TestPageView"               
+                   Title="TEst"
+                    Icon="{StaticResource AddDataIconImageSource}" 
+                ContentTemplate="{DataTemplate views:TestPageView}"  >
+        </ShellContent>
+    </FlyoutItem>
+
+
+    <MenuItem Text="{local:Translate changelanguage}"  Clicked="OnToggleLanguage" IconImageSource="{StaticResource TranslateIconImageSource}"/>
+
+    <ShellContent Title="{local:Translate Profile}"
+                      Icon="{StaticResource ProfileIconImageSource}" 
+                      ContentTemplate="{DataTemplate views:ProfileView}" />
+
+    <MenuItem Text="{local:Translate logout}" Command="{Binding LogoutCommand}" IconImageSource="{StaticResource LogoutIconImageSource}"></MenuItem>
+
+    <ShellItem Route="Login">
+        <ShellContent Title="Logoutxxxx"  ContentTemplate="{DataTemplate views:LoginView}"/>
+    </ShellItem>
+</Shell>
