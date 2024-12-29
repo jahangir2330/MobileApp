@@ -79886,11 +79886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Kuwait\\Mob\\MobileApp\\MobileApp.csproj",
+      "projectUniqueName": "E:\\Kuwait\\MobileApplication\\MobileApp\\MobileApp.csproj",
       "projectName": "MobileApp",
-      "projectPath": "E:\\Kuwait\\Mob\\MobileApp\\MobileApp.csproj",
+      "projectPath": "E:\\Kuwait\\MobileApplication\\MobileApp\\MobileApp.csproj",
       "packagesPath": "C:\\Users\\shahr\\.nuget\\packages\\",
-      "outputPath": "E:\\Kuwait\\Mob\\MobileApp\\obj\\",
+      "outputPath": "E:\\Kuwait\\MobileApplication\\MobileApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -79919,55 +79919,55 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj"
+            "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj"
             },
-            "E:\\Kuwait\\Mob\\BDO\\BDO.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\BDO\\BDO.csproj"
+            "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj"
             }
           }
         },
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "projectReferences": {
-            "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj"
+            "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj"
             },
-            "E:\\Kuwait\\Mob\\BDO\\BDO.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\BDO\\BDO.csproj"
+            "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj"
             }
           }
         },
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "projectReferences": {
-            "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj"
+            "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj"
             },
-            "E:\\Kuwait\\Mob\\BDO\\BDO.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\BDO\\BDO.csproj"
+            "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj"
             }
           }
         },
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
           "projectReferences": {
-            "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj"
+            "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj"
             },
-            "E:\\Kuwait\\Mob\\BDO\\BDO.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\BDO\\BDO.csproj"
+            "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj"
             }
           }
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "projectReferences": {
-            "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\AppConfig\\AppConfig.csproj"
+            "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\AppConfig\\AppConfig.csproj"
             },
-            "E:\\Kuwait\\Mob\\BDO\\BDO.csproj": {
-              "projectPath": "E:\\Kuwait\\Mob\\BDO\\BDO.csproj"
+            "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj": {
+              "projectPath": "E:\\Kuwait\\MobileApplication\\BDO\\BDO.csproj"
             }
           }
         }

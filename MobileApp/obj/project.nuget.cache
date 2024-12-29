@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f0ZVRs/x974=",
+  "dgSpecHash": "D59IgxJ8PuA=",
   "success": true,
-  "projectFilePath": "E:\\Kuwait\\Mob\\MobileApp\\MobileApp.csproj",
+  "projectFilePath": "E:\\Kuwait\\MobileApplication\\MobileApp\\MobileApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shahr\\.nuget\\packages\\camera.maui\\1.5.1\\camera.maui.1.5.1.nupkg.sha512",
     "C:\\Users\\shahr\\.nuget\\packages\\communitytoolkit.maui\\9.0.0\\communitytoolkit.maui.9.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Kuwait\\Mob\\CLL\\CLL.csproj": {}
+    "E:\\Kuwait\\MobileApplication\\CLL\\CLL.csproj": {}
   },
   "projects": {
-    "E:\\Kuwait\\Mob\\CLL\\CLL.csproj": {
+    "E:\\Kuwait\\MobileApplication\\CLL\\CLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Kuwait\\Mob\\CLL\\CLL.csproj",
+        "projectUniqueName": "E:\\Kuwait\\MobileApplication\\CLL\\CLL.csproj",
         "projectName": "CLL",
-        "projectPath": "E:\\Kuwait\\Mob\\CLL\\CLL.csproj",
+        "projectPath": "E:\\Kuwait\\MobileApplication\\CLL\\CLL.csproj",
         "packagesPath": "C:\\Users\\shahr\\.nuget\\packages\\",
-        "outputPath": "E:\\Kuwait\\Mob\\CLL\\obj\\",
+        "outputPath": "E:\\Kuwait\\MobileApplication\\CLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

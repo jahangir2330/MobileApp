@@ -12,125 +12,125 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MobileApp
-build_property.ProjectDir = E:\Kuwait\Mob\MobileApp\
+build_property.ProjectDir = E:\Kuwait\MobileApplication\MobileApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[E:/Kuwait/Mob/MobileApp/App.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[E:/Kuwait/Mob/MobileApp/AppShell.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[E:/Kuwait/Mob/MobileApp/Controls/AddBasketButton.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Controls/AddBasketButton.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Controls.AddBasketButton.xaml
 build_metadata.AdditionalFiles.TargetPath = Controls\AddBasketButton.xaml
 build_metadata.AdditionalFiles.RelativePath = Controls\AddBasketButton.xaml
 
-[E:/Kuwait/Mob/MobileApp/Resources/Styles/Colors.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[E:/Kuwait/Mob/MobileApp/Resources/Styles/Styles.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/ContactDocumentEmployeeView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/ContactDocumentEmployeeView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.ContactDocumentEmployeeView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ContactDocumentEmployeeView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ContactDocumentEmployeeView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/CreatePinView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/CreatePinView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.CreatePinView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CreatePinView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CreatePinView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/CustomNavigationView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/CustomNavigationView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.CustomNavigationView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CustomNavigationView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CustomNavigationView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/EmployeeView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/EmployeeView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.EmployeeView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\EmployeeView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\EmployeeView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/LoginView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/LoginView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.LoginView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/MapView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/MapView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.MapView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MapView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MapView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/NewQrScanView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/NewQrScanView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.NewQrScanView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\NewQrScanView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\NewQrScanView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/ProfileView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/ProfileView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.ProfileView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ProfileView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ProfileView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/QrCodeScanView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/QrCodeScanView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.QrCodeScanView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\QrCodeScanView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\QrCodeScanView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/QrDisplayEmployeeView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/QrDisplayEmployeeView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.QrDisplayEmployeeView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\QrDisplayEmployeeView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\QrDisplayEmployeeView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/QrDisplayVehicleView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/QrDisplayVehicleView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.QrDisplayVehicleView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\QrDisplayVehicleView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\QrDisplayVehicleView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/RemoveDataView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/RemoveDataView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.RemoveDataView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RemoveDataView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RemoveDataView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/SettingsView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/SettingsView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.SettingsView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SettingsView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\SettingsView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/TestPageView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/TestPageView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.TestPageView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\TestPageView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\TestPageView.xaml
 
-[E:/Kuwait/Mob/MobileApp/Views/VehiclePermissionView.xaml]
+[E:/Kuwait/MobileApplication/MobileApp/Views/VehiclePermissionView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MobileApp.Views.VehiclePermissionView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\VehiclePermissionView.xaml
