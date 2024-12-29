@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BDO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+328e2412fc8c00051bc5d2c381208bc7d6b2a8e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b36b2d3183b14e95773af797f00381121bbf76a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("BDO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BDO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

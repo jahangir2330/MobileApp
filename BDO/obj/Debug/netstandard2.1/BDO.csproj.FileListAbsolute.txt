@@ -1,0 +1,16 @@
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\BDO.deps.json
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\BDO.dll
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\BDO.pdb
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\CLL.dll
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\CLL.pdb
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\ar-KW\CLL.resources.dll
+E:\Kuwait\MobileApplication\BDO\bin\Debug\netstandard2.1\en-US\CLL.resources.dll
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.csproj.AssemblyReference.cache
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.AssemblyInfoInputs.cache
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.AssemblyInfo.cs
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.csproj.CoreCompileInputs.cache
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.sourcelink.json
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.csproj.Up2Date
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.dll
+E:\Kuwait\MobileApplication\BDO\obj\Debug\netstandard2.1\BDO.pdb
